@@ -1,0 +1,46 @@
+Currently Exhibiting these objects:
+
+"era300" : {
+    "name": "Era 300",
+    "image": "IMAGE OF MINIMALIST SPEAKER",
+    "quote": ' "The most suffisticated product Sonos has built" ',
+    "quoted":"Dana Krieger, head of Sonos",
+    "offerer":"Sonos",
+    "dimensions": "30x20x10 cm",
+    "materials": "hard case plastic and wood",
+    "category":"Spatial home Audio",
+    "price": " 399$"
+    },
+    "phantom_syntopia" : {
+    "name": "Phantom Syntopia",
+    "image": "IMAGE OF ELEGANT LUXURY-CAR",
+    "quote": ' "a state-of-the-art experience [...] by the forces of nature." ',
+    "quoted":"Iris van Herpen",
+    "offerer":"Rolls Royce X iris van Herpen",
+    "dimensions": "571x214x157 cm",
+    "materials": "Leather, Fabric, Steel",
+    "category":"Vehicle",
+    "price": "-"
+    },
+    "white_fromme" : {
+    "name": "White Fromme Collection",
+    "image": "IMAGE OF MINIMALISTIC SET OF INTERIOUR DESIGN CLASSIS",
+    "quote": ' "This design was inspired by the personal story of Tom Chung." ',
+    "quoted":"Petite Friture, French Design Brand",
+    "offerer":"Petite Friture X Tom Chang",
+    "dimensions": "-",
+    "materials": "Hardwearing Aluminium",
+    "category":"Exclusive Furniture",
+    "price": "-"
+    },
+    "color_palette" : {
+    "name": "2023 Color Palette",
+    "image": "IMAGE OF TRANSLUCENT GLASSSTRIPES OF A PASTELL COLOUR PALETTE",
+    "quote": ' "This collection allowed us to be more introspective about the meaning of colour in our lives." ',
+    "quoted":"Ryan Smith, chief creative of 3form",
+    "offerer":"3form",
+    "dimensions": "-",
+    "materials": "Varia, Chroma and Glass",
+    "category":"Modular Interiour Design ",
+    "price": "-"
+    }

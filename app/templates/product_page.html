@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>
+      Glass Curtain X {{ piece.offerer }}
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ppage.css') }}">
+  </head>
+
+  <body>
+    <div class="d-flex flex-column justify-content-center w-100 h-100"></div>
+    <section class="card">
+      <header>
+        <h2>{{ piece.name }}</h2>
+      </header>
+      <article>
+        <p class="box"> <img src = {{ piece.image_url }} </p>
+        <p>{{ piece.quote }}<br>
+          - {{ piece.quoted }}<br>
+        <strong>Offered by</strong>: {{ piece.offerer }}<br>
+        <strong>Dimensions</strong>: {{ piece.dimensions }}<br>
+        <strong>Materials</strong>: {{ piece.materials }}<br>
+        <strong>Category</strong>: {{ piece.category }}<br>
+        <strong>Price</strong>: {{ piece.price }}<br>
+        <a href="/">Back to Gallery</a></p>
+      </article>
+    </section>
+
+  </body>
+</html>
