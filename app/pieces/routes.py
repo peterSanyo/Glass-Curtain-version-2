@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, send_file
+from .models import Piece
 
 blueprint = Blueprint("pieces", __name__)
 
