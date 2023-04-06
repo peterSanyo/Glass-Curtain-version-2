@@ -1,6 +1,7 @@
 import pytest
 from app.app import create_app
 from flask_migrate import upgrade
+from os import environ
 
 @pytest.fixture
 def client():

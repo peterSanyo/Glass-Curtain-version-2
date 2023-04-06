@@ -2,6 +2,8 @@ from app.extensions.database import db
 from datetime import datetime
 
 class Bid(db.Model):
+    __tablename__ = "bid"
+
     id = db.Column(db.Integer, primary_key=True)
     date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
 
