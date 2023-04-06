@@ -1,7 +1,7 @@
-from app.extensions.database import db
+from app.extensions.database import db, CRUDMixin
 from datetime import datetime
 
-class Bid(db.Model):
+class Bid(db.Model, CRUDMixin):
     __tablename__ = "bid"
 
     id = db.Column(db.Integer, primary_key=True)

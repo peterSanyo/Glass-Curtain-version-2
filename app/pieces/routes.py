@@ -7,7 +7,8 @@ blueprint = Blueprint("pieces", __name__)
 def index():
     # index page
     all_pieces=Piece.query.all()
-    return render_template("index.html", piece=all_pieces)
+    print(all_pieces)
+    return render_template("index/index.html", pieces=all_pieces)
 
 
 @blueprint.route("/download")
