@@ -23,17 +23,17 @@
             </li>
             <li>
                 <label for="email">Email:</label>
-                <input type="email" id="mail" name="user_email" required />
+                <input type="email" id="user_mail" name="user_email" required />
             </li>
             
             <li>
                 <label for="piece_{{ piece.name }}"> Piece: </label>
                 <!-- <input type="submit"  value="Submit" name="{{ piece.slug }}" id="piece_{{ piece.id }}"> -->
-                <select name="piece" id="piece.name">
-                    <option value={{ piece[0].slug }}>{{ piece[0].name }}</option>
-                    <option value={{ piece[1].slug }}>{{ piece[1].name }}</option>
-                    <option value={{ piece[2].slug }}>{{ piece[2].name }}</option>
-                    <option value={{ piece[3].slug }}>{{ piece[3].name }}</option>
+                <select name="piece_id" id="piece.id">
+                    <option value={{ piece[0].id }}>{{ piece[0].name }}</option>
+                    <option value={{ piece[1].id }}>{{ piece[1].name }}</option>
+                    <option value={{ piece[2].id }}>{{ piece[2].name }}</option>
+                    <option value={{ piece[3].id }}>{{ piece[3].name }}</option>
                 </select>
             </li>
 

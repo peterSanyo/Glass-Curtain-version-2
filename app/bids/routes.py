@@ -12,13 +12,8 @@ def get_checkout():
 
 @blueprint.post("/checkout")
 def post_checkout():
-    # create a bid
-    bid = Bid()
-    bid.save()
 
-    bid = bid(
-        bid=bid
-    )
+    bid = Bid()
     bid.save()
 
     pieces = Piece.query.all()
