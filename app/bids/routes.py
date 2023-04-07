@@ -13,7 +13,15 @@ def get_checkout():
 @blueprint.post("/checkout")
 def post_checkout():
 
-    bid = Bid()
+    bid = Bid(
+        user_name = request.form.get("user_name") ,
+        country_of_origin = request.form.get("country_of_origin") ,
+        user_email = request.form.get("user_email") ,
+
+        piece_id = request.form.get("piece_id") ,
+        amount_of_bid = request.form.get("amount_of_bid") ,
+        letter = request.form.get("letter")
+    )
     bid.save()
 
     pieces = Piece.query.all()

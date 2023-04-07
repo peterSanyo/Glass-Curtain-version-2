@@ -15,4 +15,4 @@ class Bid(db.Model, CRUDMixin):
     amount_of_bid = db.Column(db.Numeric(10, 2))
     letter = db.Column(db.String(3000))
 
-    pieces = db.relationship("Piece", backref="bid", lazy=True )
+    piece = db.relationship("Piece", backref="bid", lazy=True )
