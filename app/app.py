@@ -16,6 +16,7 @@ def create_app():
 # Blueprints
 def register_blueprints(app: Flask):
     app.register_blueprint(pieces.routes.blueprint)
+    app.register_blueprint(bids.routes.blueprint)
 
 def register_extensions(app: Flask):
     db.init_app(app)
