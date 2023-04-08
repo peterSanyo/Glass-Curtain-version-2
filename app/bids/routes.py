@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request
 from app.pieces.models import Piece
-from app.bids.models import Bid
+from .services.create_bid import create_bid
 
 blueprint = Blueprint("bids", __name__)
 
@@ -12,43 +12,8 @@ def get_checkout():
 
 @blueprint.post("/checkout")
 def post_checkout():
-    # create piece
-    piece=Piece()
-    piece.save()
-
-    # create bid !
-    bid = Bid(
-        user_name = request.form.get("user_name") ,
-        country_of_origin = request.form.get("country_of_origin") ,
-        user_email = request.form.get("user_email") ,
-
-        piece_id = request.form.get("piece_id") ,
-        amount_of_bid = request.form.get("amount_of_bid") ,
-        letter = request.form.get("letter"),
-
-        piece=piece
-    )
-    bid.save()
-
     pieces = Piece.query.all()
+
+    create_bid(request.form, pieces)
+
     return render_template("bids/new.html", piece=pieces)
-
-
-
-
-# def create_order(form_data, pieces):
-
-# # create Bid
-#     bid = Bid()
-#     bid.save()
-
-#     bid = Bid(
-#     user_name = request.form.get("user_name") ,
-#     country_of_origin = request.form.get("country_of_origin") ,
-#     user_email = request.form.get("user_email") ,
-
-#     piece_id = request.form.get("piece_id") ,
-#     amount_of_bid = request.form.get("amount_of_bid") ,
-#     letter = request.form.get("letter")
-#     )
-#     bid.save()
