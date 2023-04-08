@@ -12,7 +12,11 @@ def get_checkout():
 
 @blueprint.post("/checkout")
 def post_checkout():
+    # create piece
+    piece=Piece()
+    piece.save()
 
+    # create bid !
     bid = Bid(
         user_name = request.form.get("user_name") ,
         country_of_origin = request.form.get("country_of_origin") ,
@@ -20,7 +24,9 @@ def post_checkout():
 
         piece_id = request.form.get("piece_id") ,
         amount_of_bid = request.form.get("amount_of_bid") ,
-        letter = request.form.get("letter")
+        letter = request.form.get("letter"),
+
+        piece=piece
     )
     bid.save()
 
