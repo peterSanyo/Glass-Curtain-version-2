@@ -46,7 +46,7 @@ body {
     display: flex;
     gap: 4vmin;
     position: absolute;
-    left: 20%;
+    left: 50%;
     top: 50%;
     transform: translate(0%, -50%);
 }
@@ -57,8 +57,9 @@ h1 {
 }
 
 a.nostyle:link {
+    font-size: 1.5em;
     color: rgba(255, 255, 255, 0.801);
-    text-decoration: inherit;
+    text-decoration:underline;
     color: inherit;
     cursor: auto;
 }
@@ -70,22 +71,29 @@ a.nostyle:visited {
     cursor: auto;
 }
 
-#name-track > .name{
+a.nostyle:hover {
+    color: rgb(255, 255, 255);
+}
+
+#name-track > .name, a:link{
     font-size: 1.5em;
     width:40vmin;
-    height: 66vmin;
+    max-height: 1vmin;
     object-fit: cover;
-    object-position: 100% 50%;
+    object-position: 0% 100%;
     opacity: 0.8;
 }
 
 #name-track {
+    align-self: top;    
     display: flex;
     gap: 4vmin;
     position: absolute;
-    left: 20%;
-    top: 50%;
-    transform: translate(0%, -50%);
+    left: 50%;
+    top: 18%;
+    transform: translate(0%, -140%);
+    /* border: 3px solid rgba(255, 255, 255, 0.799); */
+
 }
 
 footer{

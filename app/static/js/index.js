@@ -3,7 +3,7 @@ const track2 = document.getElementById("name-track");
 
 window.onmousedown = e => {
     track.dataset.mouseDownAt = e.clientX;
-    track2.dataset.mouseDownAt = e.clientX;
+    track2.dataset.mouseDownAt = e.clientY;
 }
 window.onmouseup = () => {
     track.dataset.mouseDownAt = "0";
