@@ -17,7 +17,7 @@ body {
     background-size: 400% 400%;
     animation: gradient 60s infinite;
     height: 40%;
-}  
+} 
   
 @keyframes gradient {
     0% {
@@ -31,7 +31,7 @@ body {
     }
 }
 
-#image-track > .image {
+#image-track > .image{
     width:40vmin;
     height: 56vmin;
     object-fit: cover;
@@ -68,5 +68,44 @@ a.nostyle:visited {
     text-decoration: inherit;
     color: inherit;
     cursor: auto;
+}
+
+#name-track > .name{
+    font-size: 1.5em;
+    width:40vmin;
+    height: 66vmin;
+    object-fit: cover;
+    object-position: 100% 50%;
+    opacity: 0.8;
+}
+
+#name-track {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+footer{
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(17, 17, 17, 0);
+    height: 2em;
+    width: 100vw;
+    padding-bottom: 1em;
+    color: rgba(255, 255, 255, 0.801);
+}
+
+.footer-content {
+    display:flex;
+    gap: 4em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 

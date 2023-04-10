@@ -11,6 +11,12 @@ def index():
     return render_template("index/index.html", pieces=all_pieces)
 
 
+@blueprint.route("/exhibit/<slug>")
+def piece(slug):
+    # product pages
+  piece= Piece.query.filter_by(slug=slug).first_or_404()
+  return render_template("pieces/product_page.html", piece=piece)
+
 @blueprint.route("/download")
 def download():
     # download exhibit material

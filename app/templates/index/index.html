@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body draggable="false">
-    <h1 draggable="false"><a class="nostyle" href="/download" draggable="false">Glass Curtain</a></h1>
+    <h1 draggable="false">Glass Curtain</h1>
 
 
     <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0" draggable="false">
@@ -29,9 +29,32 @@
         {% endfor %}
     </div> 
 
+    <div id="name-track" data-mouse-down-at="0" data-prev-percentage="0" draggable="false">
+        {% for piece in pieces %}
+        <p class="name" draggable="false">{{ piece.name }}</p>
+        {% endfor %}
 
-    
+        {% for piece in pieces %}
+        <p class="name" draggable="false">{{ piece.name }}</p>
+        {% endfor %}
+
+        {% for piece in pieces %}
+        <p class="name" draggable="false">{{ piece.name }}</p>
+        {% endfor %}
+
+        {% for piece in pieces %}
+        <p class="name" draggable="false">{{ piece.name }}</p>
+        {% endfor %}
+    </div> 
+    <footer>
+        <div class="footer-content">
+            <a class="nostyle" class="footer_inner" href="/download" draggable="false">Download Exhibition Details</a>
+            <a class="nostyle" class="footer_inner" href="/checkout" draggable="false">Place a bid</a>
+        </div>
+    </footer>
 </body>
+
+
     <script src="/static/js/index.js"></script>    
 </html>
 
