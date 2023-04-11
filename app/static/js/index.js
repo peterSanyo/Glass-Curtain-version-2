@@ -47,13 +47,13 @@ window.onmousemove = e => {
     for(const image of track.getElementsByClassName("image")) {
         image.animate({
             objectPosition: `${100 + nextPercentage}% center`
-        }, { duration: 1200, fill:"forwards" });
+        }, { duration: 100, fill:"forwards" });
     }
 
     for(const name of track2.getElementsByClassName("name")) {
         name.animate({
             objectPosition: `${100 + nextPercentage2}% center`
-        }, { duration: 1200, fill:"forwards" });
+        }, { duration: 100, fill:"forwards" });
     }
 }
 

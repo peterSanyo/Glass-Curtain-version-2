@@ -11,6 +11,7 @@
 
   <body>
     <div class="d-flex flex-column justify-content-center w-100 h-100"></div>
+    <h1>Glass Curtain</h1>
     <section class="card">
       <header>
         <h2>{{ piece.name }}</h2>
@@ -24,9 +25,13 @@
         <strong>Materials</strong>: {{ piece.materials }}<br>
         <strong>Category</strong>: {{ piece.category }}<br>
         <strong>Price</strong>: {{ piece.price }}<br>
-        <a href="/">Back to Gallery</a></p>
       </article>
     </section>
-
+    <footer draggable="false">
+      <div class="footer-content" draggable="false">
+        <a href="/">Back to Gallery</a></p>  
+        <a class="nostyle" class="footer_inner" href="/checkout" draggable="false">Place a bid</a>
+      </div>
+  </footer>
   </body>
 </html>

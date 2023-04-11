@@ -37,7 +37,7 @@ pieces_data = {
     },
     "white_fromme" : {
         "name": "White Fromme Collection",
-        "image_url1": "https://cdn.andlight.dk/images/pf-2023-outdoor-2d-victor-roussel-fromme-lounge-4k_-p.jpg?imgeng=/w_1920",
+        "image_url1": "https://media.madeindesign.com/nuxeo/products/f/c/stackable-bar-stool-fromme-white_madeindesign_406106_product800.jpg",
         "image_url2": "https://static.dezeen.com/uploads/2023/03/fromme-petite-friture-tom-chung_dezeen_2364_col_3-1704x959.jpg",
         "image_url3": "https://www.nostraforma.com/media/cache/1400x1400/002_petite_friture_vertigo_nova_140_ambient1_332df801d5c38d6072321536f64c5ed6.jpg",
         "image_url4": "https://media.madeindesign.com/nuxeo/products/f/c/stackable-bar-stool-fromme-white_madeindesign_406106_product800.jpg",
@@ -51,10 +51,10 @@ pieces_data = {
     },
     "color_palette" : {
         "name": "2023 Color Palette",
-        "image_url1": "https://static.dezeen.com/uploads/2023/02/2023-color-collection-3form-design_dezeen_2364_hero2-1704x959.jpg",
+        "image_url1": "https://design-milk.com/images/2023/02/3form-2023-color-collection-09.jpg",
         "image_url2": "https://static.dezeen.com/uploads/2023/03/2023-color-collection-3form-design_dezeen_2364_col_8.jpeg",
         "image_url3": "https://static.dezeen.com/uploads/2023/03/3form-TB.jpg",
-        "image_url4": "https://design-milk.com/images/2023/02/3form-2023-color-collection-09.jpg",
+        "image_url4": "https://static.dezeen.com/uploads/2023/02/2023-color-collection-3form-design_dezeen_2364_hero2-1704x959.jpg",
         "quote": ' "This collection allowed us to be more introspective about the meaning of colour in our lives." ',
         "quoted":"Ryan Smith, chief creative of 3form",
         "offerer":"3form",

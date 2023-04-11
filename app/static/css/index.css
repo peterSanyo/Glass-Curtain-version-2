@@ -32,8 +32,8 @@ body {
 }
 
 #image-track > .image{
-    width:40vmin;
-    height: 56vmin;
+    width:70vmin;
+    height: 75vmin;
     object-fit: cover;
     object-position: 100% 50%;
     border-radius: 10px;
@@ -46,18 +46,19 @@ body {
     display: flex;
     gap: 4vmin;
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left:35%;
+    top: 55%;
     transform: translate(0%, -50%);
 }
 
 h1 {
+    /* margin: none none none none;
+    padding: none; */
     font-size: 4em;
     opacity: 0.9;
 }
 
 a.nostyle:link {
-    font-size: 1.5em;
     color: rgba(255, 255, 255, 0.801);
     text-decoration:underline;
     color: inherit;
@@ -77,21 +78,25 @@ a.nostyle:hover {
 
 #name-track > .name, a:link{
     font-size: 1.5em;
-    width:40vmin;
+    width:70vmin;
     max-height: 1vmin;
     object-fit: cover;
     object-position: 0% 100%;
     opacity: 0.8;
+    padding:none;
+    margin:none;
 }
 
 #name-track {
+    padding:none;
+    margin:none;
     align-self: top;    
     display: flex;
-    gap: 4vmin;
+    gap: 0vmin;
     position: absolute;
-    left: 50%;
-    top: 18%;
-    transform: translate(0%, -140%);
+    left: 35%;
+    top: 14%;
+    transform: translate(0%, -2000%);
     /* border: 3px solid rgba(255, 255, 255, 0.799); */
 
 }
@@ -99,15 +104,17 @@ a.nostyle:hover {
 footer{
     position: absolute;
     text-align: center;
-    bottom: 0;
+    bottom: 0em;
     left: 0;
     right: 0;
     background: rgba(17, 17, 17, 0);
     height: 2em;
     width: 100vw;
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
     color: rgba(255, 255, 255, 0.801);
 }
+
+
 
 .footer-content {
     display:flex;
@@ -117,3 +124,115 @@ footer{
     text-align: center;
 }
 
+@media only screen and (max-width: 1300px) {
+    html {
+        height:100vh;
+        width: 100vw;
+        margin: 0rem;
+        overflow: hidden;
+        font-family: 'Helvetica neue', Arial, 'sans serif';
+        font-size: 19px;
+        align-items: center;
+        font-weight:lighter;
+        color: rgba(255, 255, 255, 0.801);
+      }  
+    h1 {
+        padding-top: none;
+        margin: none none none;
+        font-size: 280%;
+        opacity: 0.9;
+    }
+
+    #image-track > .image{
+        width: 20em;
+        min-height: 80vh;
+        object-fit: cover;
+        object-position: 100% 50%;
+        border-radius: 10px;
+        box-shadow: 0 30px 30px rgba(0, 0, 0, 0.437);
+        border: 3px solid rgba(255, 255, 255, 0.799);
+        opacity: 0.8;
+    }
+    
+    #image-track {
+        display: flex;
+        gap: 4vmin;
+        position: absolute;
+        left: 50%;
+        top: 53%;
+        transform: translate(0%, -50%);
+    }
+
+      
+    a.nostyle:link {
+        padding: none;
+        margin:none;
+        font-size: 1.5em;
+        color: rgba(255, 255, 255, 0.801);
+        text-decoration:underline;
+        color: inherit;
+        cursor: auto;
+    }
+    
+    a.nostyle:visited {
+        padding: none;
+        margin:none;
+        color: rgba(255, 255, 255, 0.801);
+        text-decoration: inherit;
+        color: inherit;
+        cursor: auto;
+    }
+    
+    a.nostyle:hover {
+        padding: none;
+        color: rgb(255, 255, 255);
+        margin:none;
+
+    }
+
+    #name-track > .name{
+        padding: none;
+        margin:none;
+        width: 386px;
+        min-height: 1vh;
+        object-fit: cover;
+        border-radius: 10px;
+        opacity: 0.8;
+    }
+    
+    #name-track {
+        padding: none;
+        margin:none;
+        display: flex;
+        gap: 1em;
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        transform: translate(0%, -50%);
+    }
+
+    
+
+  
+
+    footer{
+        position: absolute;
+        text-align: center;
+        bottom: 0em;
+        left: 0;
+        right: 0;
+        background: rgba(17, 17, 17, 0);
+        height: 2em;
+        width: 100vw;
+        padding-bottom: 1em;
+        color: rgba(255, 255, 255, 0.801);
+    }
+    p {
+        display: flex;
+        margin:none;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+}
