@@ -8,7 +8,7 @@ blueprint = Blueprint("api", __name__)
 def bids():
     bids=Bid.query.all()
 
-    return jsonify({
+    return jsonify(
         serialize_bids(bids)
-    })
+    )
 
