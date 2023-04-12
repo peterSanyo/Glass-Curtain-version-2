@@ -79,6 +79,7 @@ a.nostyle:hover {
 }
 
 #name-track > .name, a:link{
+    text-align: center;
     font-size: 1.5em;
     width:70vmin;
     max-height: 1vmin;
@@ -90,6 +91,7 @@ a.nostyle:hover {
 }
 
 #name-track {
+    text-align: center;
     padding:none;
     margin:none;
     align-self: top;    
@@ -97,7 +99,7 @@ a.nostyle:hover {
     gap: 0vmin;
     position: absolute;
     left: 35%;
-    top: 14%;
+    top: 10%;
     transform: translate(0%, -2000%);
     /* border: 3px solid rgba(255, 255, 255, 0.799); */
 
@@ -193,22 +195,25 @@ footer{
     }
 
     #name-track > .name{
+        text-align: center;
+        font-size: 2.5em;
+        width: 70vmin;
+        max-height: 1vh;
+        object-fit: cover;
+        object-position: 0% 100%;
+        opacity: 0.8;
         padding: none;
         margin:none;
-        width: 386px;
-        min-height: 1vh;
-        object-fit: cover;
-        border-radius: 10px;
-        opacity: 0.8;
     }
     
     #name-track {
+        text-align: center;
         padding: none;
         margin:none;
         display: flex;
-        gap: 1em;
+        gap: 0vmin;
         position: absolute;
-        left: 50%;
+        left: 60%;
         top: 9%;
         transform: translate(0%, -50%);
     }
@@ -247,6 +252,13 @@ footer{
         font-weight:lighter;
         color: rgba(255, 255, 255, 0.801);
       }  
+    /* Colourful waves */
+body {
+    background: linear-gradient(-45deg, #ee5c52, #e73c7e, #23a5d5, #23d5ab65);
+    background-size: 400% 400%;
+    animation: gradient 60s infinite;
+    height: 40%;
+} 
     h1 {
         padding-top: none;
         margin: none none none;

@@ -14,9 +14,16 @@
     <h2>{{ piece.name }}</h2>
     <div class="card">
       <article>
-        <p class="box"> <img src = {{ piece.image_url1 }}>
-        <p class="box">{{ piece.quote }}<br>
-          - {{ piece.quoted }}<br>
+        <p class="box1"> <img src = {{ piece.image_url1 }}>
+        <p class="box2">
+          <div class=quote>
+            <strong>
+              <strong>
+            {{ piece.quote }}<br>
+          </strong>
+          </strong>
+          </div>
+          <i> - {{ piece.quoted }}<br> </i>
         <strong>Offered by</strong>: {{ piece.offerer }}<br>
         <strong>Dimensions</strong>: {{ piece.dimensions }}<br>
         <strong>Materials</strong>: {{ piece.materials }}<br>

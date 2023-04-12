@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
     <title>Glass Curtain</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
@@ -43,7 +43,8 @@
         {% endfor %}
 
         {% for piece in pieces %}
-            <p class="name" draggable="false">{{ piece.name }}</p>
+        <a href="/exhibit/{{piece.slug}}" class="nostyle" draggable="false"><p class="name" draggable="false">{{ piece.name }}</p></a>
+
         {% endfor %}
     </div> 
     <footer draggable="false">
