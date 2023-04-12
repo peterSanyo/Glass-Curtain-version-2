@@ -24,7 +24,7 @@ def download():
 
 @blueprint.route("/run-seed")
 def run_seed():
-    if not Piece.query.filter_by(slug_0="era300").first():
+    if not Piece.query.filter_by(slug="era300").first():
         import app.scripts.seed
         return "Database seed completed!"
     else:
