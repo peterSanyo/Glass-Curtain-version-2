@@ -10,26 +10,23 @@
   </head>
 
   <body>
-    <div class="d-flex flex-column justify-content-center w-100 h-100"></div>
     <h1>Glass Curtain</h1>
-    <section class="card">
-      <header>
-        <h2>{{ piece.name }}</h2>
-      </header>
+    <h2>{{ piece.name }}</h2>
+    <div class="card">
       <article>
         <p class="box"> <img src = {{ piece.image_url1 }}>
-        <p>{{ piece.quote }}<br>
+        <p class="box">{{ piece.quote }}<br>
           - {{ piece.quoted }}<br>
         <strong>Offered by</strong>: {{ piece.offerer }}<br>
         <strong>Dimensions</strong>: {{ piece.dimensions }}<br>
         <strong>Materials</strong>: {{ piece.materials }}<br>
         <strong>Category</strong>: {{ piece.category }}<br>
-        <strong>Price</strong>: {{ piece.price }}<br>
+        <strong>Price</strong>: {{ piece.price }}<br></p> 
       </article>
-    </section>
+    </div>
     <footer draggable="false">
       <div class="footer-content" draggable="false">
-        <a href="/">Back to Gallery</a></p>  
+        <a href="/">Back to Gallery</a> 
         <a class="nostyle" class="footer_inner" href="/checkout" draggable="false">Place a bid</a>
       </div>
   </footer>

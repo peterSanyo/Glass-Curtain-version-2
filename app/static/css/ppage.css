@@ -1,12 +1,11 @@
-/* General styles - put these straight into your stylesheet */
-
-
   
 html {
-  height:100%;
+  height:100vh;
+  width: 100vw;
+  margin: 0rem;
+  overflow: hidden;
   font-family: 'Helvetica neue', Arial, 'sans serif';
-  font-size: 17px;
-  align-items: center;
+  font-size: 19px;
   font-weight: lighter;
   font-stretch:ultra-expanded;
   color: rgba(255, 255, 255, 0.801);
@@ -14,13 +13,23 @@ html {
   
  /* Colourful waves */
 body {
-  margin: auto;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    height: 40%;
+  background: linear-gradient(-45deg, #ee5c52, #e73c7e, #23a5d5, #23d5ab65);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }  
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  } 
+    50% {
+      background-position: 100% 50%;
+  } 
+    100% {
+      background-position: 0% 50%;
+  }
+}
 
+/* footer */
 footer{
   position: absolute;
   text-align: center;
@@ -33,7 +42,6 @@ footer{
   padding-bottom: 1em;
   color: rgba(255, 255, 255, 0.801);
 }
-
 .footer-content {
   display:flex;
   gap: 4em;
@@ -42,92 +50,71 @@ footer{
   text-align: center;
 }
 
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    } 
-      50% {
-        background-position: 100% 50%;
-    } 
-      100% {
-        background-position: 0% 50%;
-    }
-}
-
+/* HTML Elements */
 
 h1 {
-  margin: none none none none;
+  margin: 0em;
   font-size: 4em;
-  opacity: 0.9;
+  opacity: 0.5;
+  padding-bottom: 0em;
 }
   
 h2 {
-    margin-top: 1em;
+    margin-top: 0em;
+    margin-left: 3em;
     line-height: normal;
     text-align: center;
-    font-size: 2em;
-    line-height: 1em;
+    font-size: 4em;
+    padding-top: 0em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    opacity: 0.8;
 }
 
-  
-  
-footer p {
-  font-size: 1.5em;
-  align-self: auto;
-  line-height:0%;
-}
-    
-  
- /*  header */
-.card header {
-    background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
-    border-radius: 1.5em 1.5em 0 0;
-}
-  
-.card article {
-  height: 30em;
-}
-  
 /* card container */
 .card {
-  width: 80%;
-  min-height: 80%;
-  margin: 7em auto;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.145);
+  display:grid;
+  grid-template-rows: 1fr 1fr;
+  /* vertical-align: middle; */
+  width: 90%;
+  height: 45vmax;  
+  
+
+  margin-top: 0em;
+  margin-bottom: 2em;
+  margin-left: 5%;
+  margin-right: 5%;
+
+  border: 1px solid rgba(255, 255, 255, 0.481);
   border-radius: 16px;
   background-color: rgba(255, 255, 255, .15);
-  backdrop-filter: blur(100px);
+  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.26);
 }
-
-
-
 .card article .box {
-  text-align: center;
-  margin: none;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  min-height: 40%;
-  opacity: 0.9;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.145);
+  display:flexbox 0 0 50%;
+  box-sizing: border-box;
+  /* height: 30vh;
+  width:70vmin;
+  height: 75vmin; */
 }
 
 
+.card article p {
+  align-content: flex-start;
+  padding-top: 1.5em;
+  margin-left: 10%;
+  margin-top: 0em;
+}
+img {
+  min-width:60vmin;
+  height: 60vmin;
+  object-fit: cover;
+  border-radius: 16px;
+  opacity:0.8;
+  margin-left: 5%;
+  margin-right: 5%
+} 
 
-  .card article p {
-    padding-top: 1.5em;
-    margin-left: 10%;
-    margin-top: 0em;
-  }
-    
-
-  /* footer */
-  .card footer {
-      background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
-      border-radius: 16px;
-  }
   
   a {
     color: rgba(255, 255, 255, 0.801);
@@ -135,21 +122,9 @@ footer p {
   a:hover{
     color: rgba(255, 255, 255, 1);
   }
-    
-  .card header, footer {
-      height: 3em;
-      padding: 1em;
-      border-radius: 16px;
-  }
 
-  img {
-    max-height: 400px;
-    min-width: 70%;
-    border-radius: 16px;
-    opacity:0.8;
-  }
-  
-  /* Mobile (up to 700 px) */
+
+  /* Mobile (up to 700 px)
     
   @media only screen and (max-width: 700px) {
   html {
@@ -218,9 +193,8 @@ footer p {
   }
   }
 
-  
-  
- /* Screens up from 1200 px  */
+   */
+ /* Screens up from 1200 px 
 @media only screen and (min-width: 1200px) {
   
 .card {
@@ -259,5 +233,4 @@ footer p {
     padding-top: 10%;
     margin-left: 5%;
     margin-top: 0em;
-}
-}
+  } 
