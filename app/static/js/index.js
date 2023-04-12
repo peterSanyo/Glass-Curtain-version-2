@@ -12,33 +12,33 @@ const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/
 if (isMobile) {
 
     window.ontouchstart = e => {
-        track.dataset.mouseDownAt = e.clientX;
-        track2.dataset.mouseDownAt = e.clientY;
+        track.dataset.touchstart = e.touches[0].clientX;
+        track2.dataset.touchstart = e.touches[0].clientY;
     }
     
     window.ontouchend = () => {
-        track.dataset.mouseDownAt = "0";
+        track.dataset.touchstart = "0";
         track.dataset.prevPercentage = track.dataset.percentage;
     
-        track2.dataset.mouseDownAt = "0";
+        track2.dataset.touchstart = "0";
         track2.dataset.prevPercentage = track2.dataset.percentage2;
     }
     
     window.ontouchmove = e => {
-        if(track.dataset.mouseDownAt === "0") return;
-        if(track2.dataset.mouseDownAt === "0") return;
+        if(track.dataset.touchstart === "0") return;
+        if(track2.dataset.touchstart === "0") return;
     
-        const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX, 
+        const touchDelta = parseFloat(track.dataset.touchstart) - e.clientX, 
         maxDelta = window.innerWidth / 0.3;
-        const mouseDelta2 = parseFloat(track.dataset.mouseDownAt) - e.clientX, 
+        const touchDelta2 = parseFloat(track.dataset.touchstart) - e.clientX, 
         maxDelta2 = window.innerWidth / 0.3;
         
-        const percentage = (mouseDelta / maxDelta) * -100;
+        const percentage = (touchDelta / maxDelta) * -100;
         nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage; 
         Math.min(nextPercentage, 0);
         Math.max(nextPercentage, -100); 
     
-        const percentage2 = (mouseDelta2 / maxDelta2) * -100;
+        const percentage2 = (touchDelta2 / maxDelta2) * -100;
         nextPercentage2 = parseFloat(track2.dataset.prevPercentage) + percentage2; 
         Math.min(nextPercentage2, 0);
         Math.max(nextPercentage2, -100); 
