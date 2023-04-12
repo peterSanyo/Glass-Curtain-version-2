@@ -4,9 +4,11 @@ const track = document.getElementById("image-track");
 // name track
 const track2 = document.getElementById("name-track");
 
+// check if mobile device is indicated
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 // if user is on mobile device, execute follwing code
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) {
+if (isMobile) {
 
     window.ontouchstart = e => {
         track.dataset.touchstart = e.touches[0].clientX;
