@@ -4,12 +4,9 @@ const track = document.getElementById("image-track");
 // name track
 const track2 = document.getElementById("name-track");
 
-// check if mobile device is indicated
-const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
 
 // if user is on mobile device, execute follwing code
-if (isMobile) {
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) {
 
     window.ontouchstart = e => {
         track.dataset.touchstart = e.touches[0].clientX;
@@ -28,9 +25,9 @@ if (isMobile) {
         if(track.dataset.touchstart === "0") return;
         if(track2.dataset.touchstart === "0") return;
     
-        const touchDelta = parseFloat(track.dataset.touchstart) - e.clientX, 
+        const touchDelta = parseFloat(track.dataset.touchstart) - e.touches[0].clientX, 
         maxDelta = window.innerWidth / 0.3;
-        const touchDelta2 = parseFloat(track.dataset.touchstart) - e.clientX, 
+        const touchDelta2 = parseFloat(track.dataset.touchstart) - e.touches[0].clientX, 
         maxDelta2 = window.innerWidth / 0.3;
         
         const percentage = (touchDelta / maxDelta) * -100;
