@@ -234,3 +234,111 @@ footer{
         margin-inline-end: 0px;
     }
 }
+
+@media only screen and (max-width: 450px) {
+    html {
+        height:100vh;
+        width: 100vw;
+        margin: 0rem;
+        overflow: hidden;
+        font-family: 'Helvetica neue', Arial, 'sans serif';
+        font-size: 14px;
+        align-items: center;
+        font-weight:lighter;
+        color: rgba(255, 255, 255, 0.801);
+      }  
+    h1 {
+        padding-top: none;
+        margin: none none none;
+        font-size: 140%;
+        opacity: 0.9;
+    }
+
+    #image-track > .image{
+        width: 17em;
+        min-height: 65vh;
+        object-fit: cover;
+        object-position: 100% 50%;
+        border-radius: 10px;
+        box-shadow: 0 30px 30px rgba(0, 0, 0, 0.437);
+        border: 3px solid rgba(255, 255, 255, 0.799);
+        opacity: 0.8;
+    }
+    
+    #image-track {
+        display: flex;
+        gap: 4vmin;
+        position: absolute;
+        left: 50%;
+        top: 53%;
+        transform: translate(0%, -50%);
+    }
+
+      
+    a.nostyle:link {
+        padding: none;
+        margin:none;
+        font-size: 1em;
+        color: rgba(255, 255, 255, 0.801);
+        text-decoration:underline;
+        color: inherit;
+        cursor: auto;
+    }
+    
+    a.nostyle:visited {
+        padding: none;
+        margin:none;
+        color: rgba(255, 255, 255, 0.801);
+        text-decoration: inherit;
+        color: inherit;
+        cursor: auto;
+    }
+    
+    a.nostyle:hover {
+        padding: none;
+        color: rgb(255, 255, 255);
+        margin:none;
+
+    }
+
+    #name-track > .name{
+        padding: none;
+        margin:none;
+        width: 17em;
+        min-height: 1vh;
+        object-fit: cover;
+        opacity: 0.8;
+    }
+    
+    #name-track {
+        padding: none;
+        margin:none;
+        display: flex;
+        gap: 4vmin;
+        position: absolute;
+        left: 50%;
+        top: 9%;
+        transform: translate(0%, -50%);
+    }
+  
+    footer{
+        position: absolute;
+        text-align: center;
+        bottom: 0em;
+        left: 0;
+        right: 0;
+        background: rgba(17, 17, 17, 0);
+        height: 1em;
+        width: 100vw;
+        padding-bottom: 0.2em;
+        color: rgba(255, 255, 255, 0.801);
+    }
+    p {
+        display: flex;
+        margin:none;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+}

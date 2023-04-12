@@ -124,12 +124,12 @@ img {
   }
 
 
-  /* Mobile (up to 700 px)
-    
-  @media only screen and (max-width: 700px) {
+/* Mobile (up to 450 px) */
+/*     
+  @media only screen and (max-width: 450px) {
   html {
       font-family: 'Helvetica neue', Arial, 'sans serif';
-      font-size: 17px;
+      font-size: 15px;
       align-items: center;
       font-weight: lighter;
       font-stretch:ultra-expanded;
@@ -139,7 +139,8 @@ img {
   h1, h2 {
     min-width: 330px;
     text-align: center;
-    padding-bottom: 0%;
+    padding-bottom: 0em;
+    padding-top: 0em;
   }
   .card article {
     height: 12em;
@@ -192,8 +193,8 @@ img {
     border-radius: 16px;
   }
   }
+ */
 
-   */
  /* Screens up from 1200 px 
 @media only screen and (min-width: 1200px) {
   
