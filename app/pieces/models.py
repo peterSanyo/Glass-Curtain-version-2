@@ -9,7 +9,7 @@ class Piece(db.Model, CRUDMixin):
     image_url2 = db.Column(db.String(400))
     image_url3 = db.Column(db.String(400))
     image_url4 = db.Column(db.String(400))
-    quote = db.Column(db.String(80))
+    quote = db.Column(db.String(400))
     quoted = db.Column(db.String(80))
     offerer = db.Column(db.String(80))
     dimensions = db.Column(db.String(80))
