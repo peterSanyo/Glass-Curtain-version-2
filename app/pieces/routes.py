@@ -22,3 +22,10 @@ def download():
     # download exhibit material
     return send_file("static/downloads/exhibition.txt", as_attachment=True)
 
+@blueprint.route("/run-seed")
+def run_seed():
+    if not Piece.query.filter_by(slug="era300").first():
+        import app.scripts.seed
+        return "Database seed completed!"
+    else:
+        return "Nothing to run."
