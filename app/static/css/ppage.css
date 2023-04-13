@@ -182,7 +182,7 @@ img {
     }
     h2 {
       position:absolute;
-      top: 2%;
+      top: 1%;
       left:3%;
       margin: 0% 0% 0% 0%;
       padding: 0em 0em 0em 0em;
@@ -212,7 +212,7 @@ img {
       grid-template-rows: repeat(2, auto);
       grid-template-columns: 1fr;
       /* vertical-align: middle; */ 
-      height: 86vh; 
+      height: 77vh; 
       min-width: 97vw;
 
     

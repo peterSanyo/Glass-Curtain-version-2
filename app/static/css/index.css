@@ -288,6 +288,7 @@ body {
 
       
     a.nostyle:link {
+        font-weight:350;
         padding: none;
         margin:none;
         font-size: 1em;
@@ -317,7 +318,7 @@ body {
         padding: none;
         margin:none;
         width: 17em;
-        min-height: 1vh;
+        min-height: 1em;
         object-fit: cover;
         opacity: 0.8;
     }
@@ -329,11 +330,12 @@ body {
         gap: 4vmin;
         position: absolute;
         left: 50%;
-        top: 9%;
+        top: 10%;
         transform: translate(0%, -50%);
     }
   
     footer{
+        font-weight:350;
         position: absolute;
         text-align: center;
         bottom: 1em;
@@ -346,6 +348,7 @@ body {
         color: rgba(255, 255, 255, 0.801);
     }
     p {
+        font-weight:350;
         display: flex;
         margin:none;
         margin-block-start: 0em;
