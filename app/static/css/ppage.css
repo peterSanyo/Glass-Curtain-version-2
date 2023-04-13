@@ -134,120 +134,160 @@ img {
     color: rgba(255, 255, 255, 1);
   }
 
+  .card .button{
+        position: absolute;
+        left: 10%;
+        top: 90%;
+        display: block;
+        height: 50px;
+        width: 90px;
+        background:rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.801);
+        border:1px solid rgba(255, 255, 255, 0.801); 
+        text-align: center;
+        font-style: oblique;
+        font-size: 100%;
+        line-height: 50px;
+        border-radius: 16px;
+        text-decoration: none;
+
+        } 
+
+/* medium */
 @media only screen and (max-width: 840px) {
   h2{
     left: 1%;
+    min-width: 670px;
   }
 }
 
-/* Mobile (up to 450 px) */
-/*     
-  @media only screen and (max-width: 450px) {
-  html {
-      font-family: 'Helvetica neue', Arial, 'sans serif';
+
+
+/* MOBILE */
+/* Mobile (up to 480 px) */
+  @media only screen and (max-width: 580px) {
+    html {
+      height:100vh;
+      width: 100vw;
+      margin: 0rem;
+      overflow: hidden;
       font-size: 15px;
       align-items: center;
-      font-weight: lighter;
-      font-stretch:ultra-expanded;
-      color: rgba(255, 255, 255, 0.801);
-  }
-  
-  h1, h2 {
-    min-width: 330px;
-    text-align: center;
-    padding-bottom: 0em;
-    padding-top: 0em;
-  }
-  .card article {
-    height: 12em;
-    padding-left: 0em;
-    padding-top: 0%;
-}
-  
-  .card {
-      width: 50%;
-      min-width: 400px;
-      max-width: 1200px;
-      height: 600px;
-      margin: 1em auto;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.145);
+    }
+    h1 {
+      position:absolute;
+      font-size: 2em;
+      top: 1%;
+      left: 3%;
+    }
+    h2 {
+      position: absolute;
+      top: 3.5%;
+      margin-top: 0em;
+      margin-left: 0em;
+      line-height: normal;
+      text-align: center;
+      font-size: 2em;
+      padding-top: 0em;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      opacity: 0.9;
+    }
+
+    .footer-content {
+      text-align: center;
+    }
+
+    
+    /* card container */
+    .card {
+      /* position: absolute; */
+      top: 7%;
+      object-fit: cover;
+    
+      display:grid;
+      grid-template-rows: repeat(2, auto);
+      grid-template-columns: 1fr;
+      /* vertical-align: middle; */
+      min-height: 70vmin; 
+      height: 86vh; 
+      min-width: 97vw;
+
+    
+      margin-top: 0em;
+      margin-bottom: 0em;
+      margin-left: 0%;
+      margin-right: 0%;
+      padding: 0% 0% 0% 0% ;
+    
+      border: 1px solid rgba(255, 255, 255, 0.481);
       border-radius: 16px;
       background-color: rgba(255, 255, 255, .15);
-      backdrop-filter: blur(100px);
-  }
+      box-shadow: 0 30px 30px rgba(0, 0, 0, 0.26);
+    }
+    .card article .box1 {
+      margin-top: 0em;
+      padding-top: 0em;
+      top: 0%;
+      left: 0%;
+    }
+
+
+    img {
+      grid-row:1;
+      grid-column: 1;
+      opacity: 0.8;
+      object-fit: cover;
+      width:100%;
+      height: 50vh;
+      border-radius: 16px;
+      margin-right: 0%;
+    } 
+    
+    .card article .quote {
+      padding-bottom: 1%;
+      font-size: xx-large;
+      font-style:italic;
+    }
+    
+    .card article {
+      margin-top: 45vh;
+      margin-left: 2%;
+      grid-row:2;
+      grid-column: 1;
+      opacity: 1;
+      max-width: 99%;
+    }
+    a {
+      color: rgba(255, 255, 255, 0.801);
+    }      
+    a:hover{
+       color: rgba(255, 255, 255, 1);
+    }
+            
+    .card .button {
+      position: absolute;
+      left: 70%;
+      top: 89%;
+      display: block;
+      height: 50px;
+      width: 90px;
+      background:rgba(255, 255, 255, 0.2);
+      color: rgba(255, 255, 255, 0.661);
+      border:1px solid rgba(255, 255, 255, 0.617); 
+      text-align: center;
+      font-weight: bold;
+      font-style: oblique;
+      font-size: 100%;
+      line-height: 50px;
+      border-radius: 16px;
+      text-decoration: none;
+    }
+
   
-  .card article .box {
-    text-align: center;
-    margin: 1em 1em;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    min-height: 100%;
-    opacity: 0.9;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.145);
-  }
-
-
   
-
-  .card article p {
-    padding-top: 1.5em;
-    margin-left: 10%;
-    margin-top: 0em;
-  }
   
-  footer p {
-    font-size: 1.5em;
-    text-align: center;
-    line-height:normal;
-  }
   
-  .card footer {
-    margin-top: 10.4em;
-    background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
-    border-radius: 16px;
-  }
-  }
- */
-
- /* Screens up from 1200 px 
-@media only screen and (min-width: 1200px) {
   
-.card {
-  width: 90%;
-  height: 200%;
-  margin: 7em auto;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.145);
-  border-radius: 16px;
-  background-color: rgba(255, 255, 255, .15);
-  backdrop-filter: blur(100px);
-}
-.card article .box {
-    float: right;
-    text-align: center;
-    margin: 1em 1em;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    min-height: 70%;
-    min-width:70%;
-    opacity: 0.9;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.145);
-}
-
-
-
-footer p {
-    text-align: right;
-    font-size: 1.5em;
-    line-height:0%;
-}
-.card article p {
-    float: none;
-    min-width: 20%;
-    padding-top: 10%;
-    margin-left: 5%;
-    margin-top: 0em;
-  } 
+  
+  }

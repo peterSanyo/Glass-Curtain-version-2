@@ -33,6 +33,7 @@
                 <label for="piece_{{ piece.name }}"> Piece: </label>
                 <!-- <input type="submit"  value="Submit" name="{{ piece.slug }}" id="piece_{{ piece.id }}"> -->
                 <select name="piece_id" id="piece.id">
+                    <option value="" selected disabled hidden>Select Piece</option>
                     <option value={{ piece[0].id }}>{{ piece[0].name }}</option>
                     <option value={{ piece[1].id }}>{{ piece[1].name }}</option>
                     <option value={{ piece[2].id }}>{{ piece[2].name }}</option>
@@ -54,18 +55,13 @@
         
             <!-- <img class ="image" src= piece.image_url> -->
             <!-- ???????? -->
-            
-            
         </ul>
-
-
-
-
-
-
-
     </form>
-
+    <footer draggable="false">
+        <div class="footer-content" draggable="false">
+          <a href="/">Back to Gallery</a> 
+        </div>
+    </footer>
 
     
 </body>
