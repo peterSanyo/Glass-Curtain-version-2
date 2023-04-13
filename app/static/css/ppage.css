@@ -167,33 +167,36 @@ img {
 /* Mobile (up to 480 px) */
   @media only screen and (max-width: 580px) {
     html {
-      height:100vh;
+      height:100%;
       width: 100vw;
       margin: 0rem;
       overflow: hidden;
       font-size: 15px;
       align-items: center;
     }
+    body {
+      height:100%
+    }
     h1 {
-      position:absolute;
-      font-size: 2em;
-      top: 1%;
-      left: 3%;
+      display:none;
     }
     h2 {
-      position: absolute;
-      top: 3.5%;
-      margin-top: 0em;
-      margin-left: 0em;
+      top: 0%;
+      left:3%;
+      margin: 0% 0% 0% 0%;
+      padding: 0em 0em 0em 0em;
+      text-align: left;
       line-height: normal;
-      text-align: center;
       font-size: 2em;
       padding-top: 0em;
       margin-block-start: 0em;
       margin-block-end: 0em;
       opacity: 0.9;
     }
-
+    footer {
+      padding-bottom: 0em;
+      margin-bottom: 0em;
+    }
     .footer-content {
       text-align: center;
     }
@@ -208,8 +211,7 @@ img {
       display:grid;
       grid-template-rows: repeat(2, auto);
       grid-template-columns: 1fr;
-      /* vertical-align: middle; */
-      min-height: 70vmin; 
+      /* vertical-align: middle; */ 
       height: 86vh; 
       min-width: 97vw;
 
@@ -245,8 +247,8 @@ img {
     } 
     
     .card article .quote {
-      padding-bottom: 1%;
-      font-size: xx-large;
+      font-size: medium;
+      padding-bottom: 0%;
       font-style:italic;
     }
     
@@ -268,7 +270,7 @@ img {
     .card .button {
       position: absolute;
       left: 70%;
-      top: 89%;
+      top: 80%;
       display: block;
       height: 50px;
       width: 90px;

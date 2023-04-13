@@ -179,3 +179,173 @@ a {
 a:hover{
   color: rgba(255, 255, 255, 1);
 }
+
+/* MOBILE */
+/* Mobile (up to 480 px) */
+@media only screen and (max-width: 580px) {
+  html {
+    height:100%;
+    width: 100vw;
+    font-family: 'Helvetica neue', Arial, 'sans serif';
+    font-size: 16px;
+    align-items:baseline;
+    font-weight:lighter;
+    color: rgba(255, 255, 255, 0.801);
+  }
+
+   /* Colourful waves */
+  body {
+    margin: none;
+    background: linear-gradient(-45deg, #ee5c52, #e73c7e, #23a5d5, #23d5ab65);
+    background-size: 400% 400%;
+    animation: gradient 60s infinite;
+    height: 40%;
+  }  
+  
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      } 
+        50% {
+          background-position: 100% 50%;
+      } 
+        100% {
+          background-position: 0% 50%;
+      }
+  }
+    
+    
+  h1, h2 {
+    margin-top: 0em;
+    padding-top: 0em;
+    padding-left: 1%;
+    text-align: left;
+    font-size: 2em;
+    line-height: 1em;
+  }
+
+form {
+    /* Center the form on the page */
+    margin: 3% 3% 3% 3%;
+    height: 200%;
+    width: 85vw;
+    /* Form outline */
+    border-radius: 1em;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.221);
+    border: 1px solid rgba(255, 255, 255, 0.145);
+    border-radius: 16px;
+    background-color: rgba(132, 132, 132, 0.08);
+    background-image: -o-linear-gradient();
+}
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  form li + li {
+    margin-top: 1em;
+  }
+  
+  label {
+    /* Uniform size & alignment */
+    display:inline-block;
+    width: 20%;
+    text-align: center;
+    font-weight:350;
+  }
+  
+  input,
+  textarea, select  {
+    /* To make sure that all text fields have the same font settings
+       By default, textareas have a monospace font */
+    font: 1em 'Helvetica neue';
+    text-align: center;  
+    color: rgba(255, 255, 255, 0.801);
+    font-weight: lighter;
+    /* Uniform text field size */
+    width: 60%;
+    box-sizing: border-box;
+  
+    /* Match form field borders */
+    background-color: rgba(255, 255, 255, 0) ;
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    border-radius: 16px;
+}
+
+
+  
+  input:focus,
+  textarea:focus {
+    /* Additional highlight for focused elements */
+    border-color:  rgba(255, 255, 255, 0.801);
+    background-color: rgba(255, 255, 255, 0.195) ;
+
+  }
+  
+  textarea {
+    /* Align multiline text fields with their labels */
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+    text-align:start;
+    color: rgba(255, 255, 255, 0.8) ;
+  
+    /* Provide space to type some text */
+    height: 5em;
+  }
+  
+  .button {
+    text-align: center;
+  }
+  
+button {
+    /* This extra margin represent roughly the same space as the space
+       between the labels and their text fields */
+    background-color:rgba(255, 255, 255, 0.2);
+    margin-left: 0.5em;
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    border-radius: 16px;
+}
+
+button, p {
+    color: rgba(255, 255, 255, 0.944);
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 14px;
+}
+
+.image {
+    display:block;
+    margin-left: 80%;
+    margin-right: auto;
+
+}
+footer{
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(17, 17, 17, 0);
+  height: 2em;
+  width: 100vw;
+  padding-bottom: 0em;
+  color: rgba(255, 255, 255, 0.801);
+}
+.footer-content {
+  display:flex;
+  gap: 4em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+a {
+  color: rgba(255, 255, 255, 0.801);
+}
+a:hover{
+  color: rgba(255, 255, 255, 1);
+}
+
+}
