@@ -28,9 +28,9 @@ if (isMobile) {
         if(track2.dataset.touchstart === "0") return;
     
         const touchDelta = parseFloat(track.dataset.touchstart) - e.touches[0].clientX, 
-        maxDelta = window.innerWidth / 0.3;
+        maxDelta = window.innerWidth / 0.1;
         const touchDelta2 = parseFloat(track.dataset.touchstart) - e.touches[0].clientX, 
-        maxDelta2 = window.innerWidth / 0.3;
+        maxDelta2 = window.innerWidth / 0.1;
         
         const percentage = (touchDelta / maxDelta) * -100;
         nextPercentage = parseFloat(track.dataset.prevPercentage) + percentage; 
