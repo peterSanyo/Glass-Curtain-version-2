@@ -253,6 +253,7 @@ img {
     }
     
     .card article {
+      font-weight:350;
       margin-top: 45vh;
       margin-left: 2%;
       grid-row:2;
