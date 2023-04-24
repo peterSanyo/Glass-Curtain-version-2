@@ -10,10 +10,10 @@ blueprint = Blueprint("api", __name__)
 def bids():
     if environ.get("API_KEY") == request.args.get("key"):
         bids=Bid.query.all()
-        incomin_bids = jsonify(
+        incoming_bids = jsonify(
             serialize_bids(bids)
             )
-        return render_template("bids/api.html", incoming_bids=incomin_bids)
+        return render_template("bids/api.html", incoming_bids=incoming_bids)
     else:
         return jsonify({"error": "Invalid API key"}), 401
 
