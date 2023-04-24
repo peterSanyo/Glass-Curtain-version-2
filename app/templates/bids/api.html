@@ -5,23 +5,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
     <title>Glass Curtain X Bid </title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/api.css') }}">
 </head>
 <body>
     <h1>Admin Page</h1>
-    <form action="/checkout" method="POST">
-        
+    <form method="GET">
+        <h2>Incoming Bids:</h2>        
         {% if error %}
             <h2 style="color: rgba(255, 99, 71, 0.805);">{{ error }}</h2>
         {% endif %}
-        <p> <datetime class="utcnow"></datetime> </p>
-
-        <h2>Incoming Bids:</h2>
         <ul>
             {% for incoming_bid in incoming_bids %}
             <li>{{ incoming_bid }}</li>
             {% endfor %}
         </ul>
+    </form>
+
+    <a href='/run-seed'>RUN SEEDS</a>
+    <a href='/delete-seed'>DELETE SEEDS</a>
+    
+
+    <form action="/api/v1/admin" method="POST">
+        <h3>Update Exhibits</h3>
+        <p>Make sure to fill out tall fields before updating</p>
+        <p>Make sure to delete and call seed routes</p>
+        <form method="POST">
+
+            {% for i in range(4) %}
+            <h3>Piece {{ i + 1 }}</h3>
+            <label>Name</label>
+            <input type="text" name="name{{ i }}" required><br>
+            
+            <label>Image URL 1</label>
+            <input type="text" name="img_url1{{ i }}" required><br>
+    
+            <label>Image URL 2</label>
+            <input type="text" name="img_url2{{ i }}" required><br>
+    
+            <label>Image URL 3</label>
+            <input type="text" name="img_url3{{ i }}" required><br>
+    
+            <label>Image URL 4</label>
+            <input type="text" name="img_url4{{ i }}" required><br>
+    
+            <label>Quote</label>
+            <input type="text" name="quote{{ i }}" required><br>
+    
+            <label>Quoted</label>
+            <input type="text" name="quoted{{ i }}" required><br>
+    
+            <label>Offerer</label>
+            <input type="text" name="offerer{{ i }}" required><br>
+
+            <label>Dimensions</label>
+            <input type="text" name="dimensions{{ i }}" required><br>
+
+            <label>Materials</label>
+            <input type="text" name="materials{{ i }}" required><br>
+
+            <label>Category</label>
+            <input type="text" name="category{{ i }}" required><br>
+
+            <label>Price</label>
+            <input type="number" name="price{{ i }}" required><br>
+            {% endfor %}
+            <Button type="submit">Delete and exchange Objects</Button>
+        </form>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
 
 
        

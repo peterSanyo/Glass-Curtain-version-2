@@ -1,0 +1,183 @@
+html {
+    height:100%;
+    font-family: 'Helvetica neue', Arial, 'sans serif';
+    font-size: 19px;
+    align-items: center;
+    font-weight:lighter;
+    color: rgba(255, 255, 255, 0.801);
+  }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.8);
+  }
+    
+   /* Colourful waves */
+  body {
+    margin: auto;
+    background: linear-gradient(-45deg, #ee5c52, #e73c7e, #23a5d5, #23d5ab65);
+    background-size: 400% 400%;
+    animation: gradient 60s infinite;
+    height: 40%;
+  }  
+  
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      } 
+        50% {
+          background-position: 100% 50%;
+      } 
+        100% {
+          background-position: 0% 50%;
+      }
+  }
+    
+    
+  h1, h2 {
+    /* margin-top: 1em; */
+    padding-left: 2.7em;
+    text-align: left;
+    font-size: 2em;
+    line-height: 1em;
+  }
+
+form {
+    /* Center the form on the page */
+    margin: 10% 10% 10% 10%;
+    width: 80%;
+    /* Form outline */
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.221);
+    border: 1px solid rgba(255, 255, 255, 0.145);
+    border-radius: 16px;
+    background-color: rgba(132, 132, 132, 0.08);
+    background-image: -o-linear-gradient();
+}
+
+.image img {
+    width: 220px;
+    height: auto;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+  
+  ul {
+    list-style: none;
+    padding: 1em;
+    margin: 1em;
+  }
+  
+  form li + li {
+    margin-top: 1em;
+  }
+  
+  label {
+    /* Uniform size & alignment */
+    display:inline-block;
+    width: 30%;
+    text-align: center;
+  }
+  
+  input,
+  textarea, select  {
+    /* To make sure that all text fields have the same font settings
+       By default, textareas have a monospace font */
+    font: 1em 'Helvetica neue';
+    text-align: center;  
+    color: rgba(255, 255, 255, 0.801);
+    font-weight: lighter;
+    /* Uniform text field size */
+    width: 300px;
+    box-sizing: border-box;
+    padding: 1em;
+    margin: 1em;
+  
+    /* Match form field borders */
+    background-color: rgba(255, 255, 255, 0) ;
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    border-radius: 16px;
+}
+
+
+  
+  input:focus,
+  textarea:focus {
+    /* Additional highlight for focused elements */
+    border-color:  rgba(255, 255, 255, 0.801);
+    background-color: rgba(255, 255, 255, 0.195) ;
+
+  }
+  
+  textarea {
+    /* Align multiline text fields with their labels */
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+    text-align:start;
+    color: rgba(255, 255, 255, 0.8) ;
+  
+    /* Provide space to type some text */
+    height: 5em;
+  }
+  
+  .button {
+    /* Align buttons with the text fields */
+    padding-left: 100px; /* same size as the label elements */
+  }
+  
+button {
+    /* This extra margin represent roughly the same space as the space
+       between the labels and their text fields */
+    background-color:rgba(255, 255, 255, 0.2);
+    margin-left: 0.5em;
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    border-radius: 16px;
+}
+
+button, p {
+    color: rgba(255, 255, 255, 0.944);
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 14px;
+}
+
+.image {
+    display:block;
+    margin-left: 80%;
+    margin-right: auto;
+
+}
+footer{
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(17, 17, 17, 0);
+  height: 2em;
+  width: 100vw;
+  padding-bottom: 1em;
+  color: rgba(255, 255, 255, 0.801);
+}
+.footer-content {
+  display:flex;
+  gap: 4em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+a {
+  color: rgba(255, 255, 255, 0.801);
+}
+a:hover{
+  color: rgba(255, 255, 255, 1);
+}

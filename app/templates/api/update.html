@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> 
+    <title>Glass Curtain X Bid </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+</head>
+<body>
+    <h1>Admin Page</h1>
+    {% if error %}
+        <h2 style="color: rgba(255, 99, 71, 0.805);">{{ error }}</h2>
+    {% endif %}
+    
+    <h2>Form to update Objects</h2>
+    
+    <p>Old Objects get deleted and replaced by Form entries.</p>
+    
+    <p>All Fields have to be filled out to perfrom this action(!)</p>
+    
+    <form action="/app/templates/api/v1/bids/update_objects" method="POST" >
+        <form action="/checkout" method="POST">
+            <h1>Place your Bid:</h1>
+            {% if error %}
+                <h2 style="color: rgba(255, 99, 71, 0.805);">{{ error }}</h2>
+            {% endif %}
+            <p> <datetime class="utcnow"></datetime> </p>
+            <ul>
+                <li>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="user_name" required />
+                </li>
+                <li>
+                    <label for="country">Country:</label>
+                    <input type="text" id="country_of_origin" name="country_of_origin" placeholder="Shipping Country" />
+                </li>
+                <li>
+                    <label for="email">Email:</label>
+                    <input type="email" id="user_mail" name="user_email" required />
+                </li>
+                
+                <li>
+                    <label for="piece_{{ piece.name }}"> Piece: </label>
+                    <!-- <input type="submit"  value="Submit" name="{{ piece.slug }}" id="piece_{{ piece.id }}"> -->
+                    <select name="piece_id" id="piece.id">
+                        <option value="" selected disabled hidden>Select Piece</option>
+                        <option value={{ piece[0].id }}>{{ piece[0].name }}</option>
+                        <option value={{ piece[1].id }}>{{ piece[1].name }}</option>
+                        <option value={{ piece[2].id }}>{{ piece[2].name }}</option>
+                        <option value={{ piece[3].id }}>{{ piece[3].name }}</option>
+                    </select>
+                </li>
+    
+                <li class="bid">
+                    <label for="bid">Your Bid:</label>
+                    <input type="number" id="amount_of_bid" name="amount_of_bid" placeholder="in USD $" required />
+                </li>
+                <li>
+                    <label for="letter">Message:</label>
+                    <textarea id="letter" name="letter" placeholder="Your personal message to the offerer" required ></textarea>
+                </li>
+                <li class="button">
+                    <button type="submit"><p>Submit your bid</p></button>
+                </li>
+            </ul>
+        </form>    
+       
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="/update_and_delete_form" class="d&u-button" role="button">Delete and Exchange Objects:</a>
+    <footer draggable="false">
+        <div class="footer-content" draggable="false">
+          <a href="/">To Gallery</a> 
+        </div>
+    </footer>
+
+    
+</body>
+</html>
