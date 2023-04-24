@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
 </head>
 <body>
-
+    <h1>Admin Page</h1>
     <form action="/checkout" method="POST">
-        <h1>Admin Page</h1>
+        
         {% if error %}
             <h2 style="color: rgba(255, 99, 71, 0.805);">{{ error }}</h2>
         {% endif %}
