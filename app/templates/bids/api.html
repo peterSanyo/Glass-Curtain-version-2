@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/api.css') }}">
 </head>
 <body>
-    <h1>Admin Page</h1>
+    <div class="navbar">
+        <h1>Admin Page</h1>
+        <a href="/">Back to Gallery</a>
+        <a href="/run-seed">RUN SEEDS</a>
+        <a href="/delete-seed">DELETE SEEDS</a>
+    </div>
+    
     <form method="GET">
         <h2>Incoming Bids:</h2>        
         {% if error %}
@@ -20,9 +26,6 @@
             {% endfor %}
         </ul>
     </form>
-
-    <a href='/run-seed'>RUN SEEDS</a>
-    <a href='/delete-seed'>DELETE SEEDS</a>
     
 
     <form action="/api/v1/admin" method="POST">
@@ -71,39 +74,5 @@
             {% endfor %}
             <Button type="submit">Delete and exchange Objects</Button>
         </form>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-
-       
-    <footer draggable="false">
-        <div class="footer-content" draggable="false">
-          <a href="/">To Gallery</a> 
-        </div>
-    </footer>
-
-    
 </body>
 </html>

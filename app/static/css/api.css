@@ -1,5 +1,5 @@
 html {
-    height:100%;
+    height:300vh;
     font-family: 'Helvetica neue', Arial, 'sans serif';
     font-size: 19px;
     align-items: center;
@@ -7,25 +7,12 @@ html {
     color: rgba(255, 255, 255, 0.801);
   }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: rgba(255, 255, 255, 0.8);
-  }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: rgba(255, 255, 255, 0.8);
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    color: rgba(255, 255, 255, 0.8);
-  }
-    
-   /* Colourful waves */
+
   body {
     margin: auto;
-    background: linear-gradient(-45deg, #ee5c52, #e73c7e, #23a5d5, #23d5ab65);
-    background-size: 400% 400%;
-    animation: gradient 60s infinite;
-    height: 40%;
+    background: linear-gradient(0deg, #ee5c52, #e73c7e,#e73c7e, #1e99c5 );
+    background-size: 10% 300%;
+    height: 100%;
   }  
   
   @keyframes gradient {
@@ -175,9 +162,29 @@ footer{
   text-align: center;
 }
 
-a {
-  color: rgba(255, 255, 255, 0.801);
+
+
+.navbar {
+    background-color: rgba(126, 126, 126, 0.726);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 0;
+    z-index: 1000;
 }
-a:hover{
-  color: rgba(255, 255, 255, 1);
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding-top: 3%;
+    text-decoration: underline;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.311);
+    border-radius: 2em;
+    color: white;
+    transition:all 0.5s ease;
 }
