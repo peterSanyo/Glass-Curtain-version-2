@@ -34,10 +34,9 @@
                 <!-- <input type="submit"  value="Submit" name="{{ piece.slug }}" id="piece_{{ piece.id }}"> -->
                 <select name="piece_id" id="piece.id">
                     <option value="" selected disabled hidden>Select Piece</option>
-                    <option value={{ piece[0].id }}>{{ piece[0].name }}</option>
-                    <option value={{ piece[1].id }}>{{ piece[1].name }}</option>
-                    <option value={{ piece[2].id }}>{{ piece[2].name }}</option>
-                    <option value={{ piece[3].id }}>{{ piece[3].name }}</option>
+                    {% for i in range(4) %}
+                        <option value={{ piece[i].id }}>{{ piece[i].name }}</option>
+                    {% endfor %}
                 </select>
             </li>
 
