@@ -295,7 +295,7 @@ body {
         color: rgba(255, 255, 255, 0.801);
         text-decoration:underline;
         color: inherit;
-        cursor: auto;
+        cursor:pointer;
     }
     
     a.nostyle:visited {
