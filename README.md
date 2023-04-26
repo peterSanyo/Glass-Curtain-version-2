@@ -47,4 +47,14 @@ Same goes for the Objects if wanted to be exchanged, since it is meant to be upd
 
 Comments, hints and tips for better solutions and approaches are appreciated and will be considered.
 
-For the future I would like to implement an accesibility concept which alters the experience maybe by detecting whether screenreaders ara activated and based on that stop the animations, change the layout to focus on more of an auditive experience which could be easy to navigate. I would like to explore this aspect further.
+
+https://user-images.githubusercontent.com/125472114/234611650-92958c70-bbb8-4525-8184-fad185954043.mov
+
+
+
+https://user-images.githubusercontent.com/125472114/234611747-0f955294-12fe-4f33-bf0c-535caaa3ca40.mov
+
+
+
+https://user-images.githubusercontent.com/125472114/234611772-83967454-a6da-42a9-b41b-80a71aaafa0d.mov
+
