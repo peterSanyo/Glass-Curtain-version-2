@@ -30,12 +30,11 @@
             </li>
             
             <li>
-                <label for="piece_{{ piece.name }}"> Piece: </label>
-                <!-- <input type="submit"  value="Submit" name="{{ piece.slug }}" id="piece_{{ piece.id }}"> -->
+                <label for="piece_id"> Piece: </label>
                 <select name="piece_id" id="piece.id">
                     <option value="" selected disabled hidden>Select Piece</option>
-                    {% for i in range(4) %}
-                        <option value={{ piece[i].id }}>{{ piece[i].name }}</option>
+                    {% for piece in pieces %}
+                        <option value={{ piece.id }}>{{ piece.name }}</option>
                     {% endfor %}
                 </select>
             </li>

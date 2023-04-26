@@ -8,7 +8,7 @@ blueprint = Blueprint("bids", __name__)
 @blueprint.get("/checkout")
 def get_checkout():
     pieces = Piece.query.all()
-    return render_template("bids/new.html", piece=pieces)
+    return render_template("bids/new.html", pieces=pieces)
 
 @blueprint.post("/checkout")
 def post_checkout():
@@ -26,7 +26,7 @@ def post_checkout():
             raise Exception("Please fill out all fields.")
 
         create_bid(request.form, pieces)
-        return render_template("bids/new.html", piece=pieces)
+        return render_template("bids/new.html", pieces=pieces)
     
     except Exception as error_message:
         error = error_message or "An error occured while processing your order. Please make sure to enter valid data."
