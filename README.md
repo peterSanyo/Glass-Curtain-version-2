@@ -1,41 +1,50 @@
 # Glass-Curtain-version-2
-Hand-in 4/5 , Deployment of an application.
-Foundations 2023, CODE University Berlin
-by Péter Sanyó, 14th April 2023
+Final Hand-in, Assessment.
+Foundations of Web Development 2023, CODE University Berlin
+by Péter Sanyó, 26th April 2023
 
 Tech stack
-Front end:HTML, CSS(responsive), Javascript 
-Back end: Python, Flask, Jinja2
+Front end: HTML (Jinja2), CSS, Javascript 
+Back end: Python, Flask
+Database Framework: SQLAlchemy
 Deployed on: render.com
-Database hosted separately.
+Database hosted separately: POSTGRESQL
 
-This is the second iteration of my foundations project. 
-Project has been redone from scratch since I ran into issues over and over. 
-Second version seems more solid and clean to work with until now. 
+OVERALL IDEA:
+This application depicts an auction gallery where 4 objects get to be curated over a time period of 2 weeks.
+Every two weeks the objects get exchanged and create a new temporary exhibition.
+Visitors of the gallery can place bids anonymously on objects which are collected in the database and are accessable by the page admin (api).
+The 5 highest bids (including letters from the bidders) are collected and will be then manually forwarded to the offerers.
+That is also the point where the rsponsibility of the platform admins ends.
+Payment methods and transportations logistics is to be comunicated between offerer and accepted bidder directly.
 
-The idea of this application is of an Auction Gallery where 4 objects get to be curated over a time-period of a week.
+ADMIN-SIDE:
 The idea was to make it easy for the operating person to exchange the objects so that every 2 weeks the gallery is exhibiting a new selection of pieces. 
 Users can place bids, and they will be shown in a sorted maner and can be accessed with the api key. 
 From there the 3 biggest bids are forwarded to the manufacturer. 
 Payment, shipping etc are to be discussed directly once the manufacturer decides which bid to accept. 
 Bids are only accepted when all values are entered. 
 
-The App is meant to look engaging and work on laptop-size, bigger screens, bigger TV-Screens as on mobile as well. Touch gestures and mouseclick events are both considered in this case. 
-Mobile differs from browser to browser but works best on chrome and firefox. 
-Since it should be some kind of digital gallery I tried to make it visually appealing. For that reason i added the slow background animation so that the page stays interesting for a longer period of time. 
-The paralax effect which results from the image position scrolling into the complientary direction to the image container should also add a small twist to the experience. 
-The HTML Tags are all set to draggable=false to make the drag fucntion work. 
+AESTHETICS / EXPERIENCE:
+The App is meant to look engaging and work on laptop-size, bigger screens, bigger TV-Screens as well as on mobilels equally well. 
+Touch gestures and mouseclick events are both considered in the JavaScript functionality (although with different sliding sensitivities).  
+Since the project is meant to be a digital gallery I tried to make it visually appealing. 
+Screens should be watchable and interesting for a longer period of time, therefore I added the slow background animation, to make it breathe. 
+Displayed contetn is never 100% but rather displayed with an opacity up to 0.9 to make it blend in with the animation and the colours.
+The paralax effect which results from the image position scrolling into the opposite direction to the image container should also add a small twist to the experience. The smaller the screen is the better you see it, since the frames shouldn't exceed the format of the ratio of the pictures.
+The HTML Tags are all set to draggable=false to make the drag function work more fluently.
 
-For deployment porpusses i needed to install an older version of python-dotenv and use psycopg2-binary instead of psycopg2 to make it work. 
-
-This project is a work in progress. 
-Work ist still to be done.
-
-Will work further on following topics:
-- Accessibility: alternative design-concept, maybe animation-stop toggle, audio description read by manufacturer (?) 
-- Fine-tuned mobile version.
-- Fine-Tuned Api interface 
-- What ways exist to make the application more performant? It seems to be very performance heavy on my laptop, advice is appreciated. 
+Deployment:
+For deployment porpusses I needed to install an older version of python-dotenv and use psycopg2-binary instead of psycopg2 to make it work. 
+Also had to use python-dotenv Version 0.21.1 , since render.com didn't seem to support newer versions. 
 
 
+FUNCTIONALITIES:
+Names above the image-slides are clickable linkst to get to the specific product pages. 
+The product page urls are rendered dynamically by referring to the piece IDs which are also accessed in the form-picker. 
+The Bid-Form needs to be filled out entirely, otherwise the bid is not accepted. 
+Same goes for the Objects if wanted to be exchanged, since it is meant to be updated every two weeks only, every value needs to be filled out to make the app dynamically generate the side from the database. NONE-Objects are caught by if-statement in the HTML-Form and not to be displayed to further secure a smooth Exhibition Reset. 
 
+Comments, hints and tips for better solutions and approaches are appreciated and will be considered.
+
+For the future I would like to implement an accesibility concept which alters the experience maybe by detecting whether screenreaders ara activated and based on that stop the animations, change the layout to focus on more of an auditive experience which could be easy to navigate. I would like to explore this aspect further.
