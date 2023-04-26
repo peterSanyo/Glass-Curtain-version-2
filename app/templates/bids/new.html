@@ -34,7 +34,9 @@
                 <select name="piece_id" id="piece.id">
                     <option value="" selected disabled hidden>Select Piece</option>
                     {% for piece in pieces %}
+                        {% if piece.name %}
                         <option value={{ piece.id }}>{{ piece.name }}</option>
+                        {% endif %}
                     {% endfor %}
                 </select>
             </li>
